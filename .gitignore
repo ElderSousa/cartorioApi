@@ -48,3 +48,6 @@ bin/**/zh-Hant/
 *.cache
 *.log
 Properties/launchSettings.json
+
+# Ignorar arquivos de log do SQL Server
+*.ldf
