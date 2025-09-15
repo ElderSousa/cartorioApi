@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Config xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Instancias>
+    <InstanciaServidor>
+      <NomeInstancia>PRODUCAO</NomeInstancia>
+      <Servidor>localhost</Servidor>
+      <Usuario>sa</Usuario>
+      <Senha>Po77TE6g</Senha>
+      <UltimaInstanciaUsada>true</UltimaInstanciaUsada>
+    </InstanciaServidor>
+  </Instancias>
+  <MemoriaMaxima>2</MemoriaMaxima>
+  <LayoutSistema>Dark_Green</LayoutSistema>
+</Config>

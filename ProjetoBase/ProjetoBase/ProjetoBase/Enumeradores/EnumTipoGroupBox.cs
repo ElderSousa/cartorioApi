@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ProjetoBase.Enumeradores
+{
+    //Referente ao tipo de groupBox
+    public enum EnumTipoGroupBox
+    {
+        EMAIL = 1,
+        ENDERECO = 2,
+        IMPOSTO_TAXA = 3,
+        OBJETO_NEGOCIO = 4,
+        PARTE_ESCRITURA = 5,
+        SCHEMA = 6,
+        SUB_TIPO = 7,
+        TELEFONE = 8,
+        TIPO_ATO = 9,
+        DOCUMENTO = 10,
+        NIVEL_ACESSO = 11,
+        PARTE_PROCURACAO_ESCRITURA = 12,
+        PARTE_PESSOA = 13,
+        NUMERACAO_INICIAL_PROTOCOLO = 14,
+        NUMERACAO_INICIAL_FOLHA_LIVRO = 15,
+        INSTANCIA_SERVIDOR = 16,
+        PARTE_PESSOA_COM_ENDERECO_NOTIFICACAO = 17,
+        PARTE_PESSOA_RTD_RPJ = 18,
+        TIPO_PROTOCOLO = 19,
+        TIPO_SERVICO_PROTOCOLO = 20,
+        TIPO_NEGOCIO_ESCRITURA = 21,
+        PARTE_ESCRITURA_SDI = 22,
+        FILHO_REGISTRO_SDI = 23,
+        REGISTRO_DOI = 24,
+        MODELO_IMPRESSAO_HABILITACAO = 25,
+        MODELO_IMPRESSAO_GENERICA = 26,
+        INFORMACAO_CARTORIO_ORIGEM = 27,
+        NUMERACAO_TIPO_CEP = 28,
+        NUMERACAO_TIPO_CESDI = 29,
+        NUMERACAO_TIPO_RCTO = 30,
+        IMOVEL = 31,
+        IMPOSTO_TAXA_ITBI = 32,
+        DEVEDOR_SOLIDARIO = 33,
+        REPRESENTANTE_TABELIONATO = 34,
+        TIPO_ORDEM_LIVRO_ESCRITURA = 35,
+        TIPO_ORDEM_LIVRO_ATO_SDI = 36,
+        PARTE_INDIRETA_IMOVEL = 37,
+        TABELA_EMOLUMENTO = 38,
+        ONUS_ITEM_LOTEAMENTO = 39,
+        ALIENACAO_ITEM_LOTEAMENTO = 40,
+        ONUS_ITEM_CONDOMINIO = 41,
+        ALIENACAO_ITEM_CONDOMINIO = 42,
+        PARTE_PESSOA_PROCURACAO = 43,
+        CUSTA_ADICIONAL_PROTESTO = 44,
+        CRA_IRREGULARIDADES = 45,
+        BEMRTD = 46,
+        PARTE_PESSOA_DISTRIBUICAO_DOCUMENTO = 47,
+        REGISTRO_DOITU = 48,
+        AUTORIZACAO_ACAO = 49,
+        REGISTRO_DOI_WEB = 50,
+        SERVENTIA_ANEXADA_PROTESTO = 51,
+        SERVENTIA_ANEXADA_RTDPJ = 52,
+        SERVENTIA_ANEXADA_NOTAS = 53,
+    }
+}

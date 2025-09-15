@@ -1,0 +1,83 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ProjetoBase.Enumeradores
+{
+    //Referente ao tipo do controle BotaoCC
+    public enum TipoBotao
+    {
+        Cadastrar = 1,
+        Salvar = 2,
+        Deletar = 3,
+        Novo = 4,
+        Cancelar = 5,
+        SmallAdicionar = 6,
+        SmallAlterar = 7,
+        SmallRemover = 8,
+        SmallCancelar = 9,
+        SmallPesquisar = 10,
+        FinalizarPedido = 11,
+        SalvarOrcamento = 12,
+        CancelarOrcamento = 13,
+        Sair = 14,
+        Pagar = 15,
+        PraticarAtos = 16,
+        PraticarAto = 17,
+        Retificar = 18,
+        ReenviarLote = 19,
+        AbrirAto = 20,
+        AbrirPedido = 21,
+        SmallSalvar = 22,
+        SmallVisualizar = 23,
+        Recibo = 24,
+        Imprimir = 25,
+        ReconsultarLote = 26,
+        AtoOriginal = 27,
+        CancelarPagamento = 28,
+        Selecionar = 29,
+        Sim = 30,
+        Nao = 31,
+        AbrirImovel = 32,
+        GerarImovel = 33,
+        EditorTexto = 34,
+        RetificarArea = 35,
+        OK = 36,
+        FichaCompleta = 37,
+        Gerar = 38,
+        ConcluirDemanda = 39,
+        FinalizarPendencia = 40,
+        BotaoGenerico = 41,
+        PraticarAtosPendentesSelo = 42,
+        PraticarAtoPendenteSelo = 43,
+        ImprimirEtiqueta = 44,
+        Sincronizar = 45,
+        FinalizarPrenotacao = 46,
+        TrocoDecolucao = 47,
+        SalvarPedido = 48,
+        ReceberConta = 49,
+        DevolverConta = 50,
+        Cupom = 51,
+        Finalizar = 52,
+        PagarConta = 53,
+        ReabrirDemanda = 54,
+        AlterarOrcamento = 55,
+        GerarCartaoAutografo = 56,
+        SmallSelar = 57,
+        SmallRemoverTodos = 58,
+        GerarXml = 59,
+        Enviado = 60,
+        PesquisarMenu = 61,
+        SmallArmazenar = 62,
+        SmallConsultar = 63,
+        SmallValidar = 64,
+        SmallAdicionarMultiplos = 65,
+        EmitirCarta = 66,
+        NotificacaoConcluida = 67,
+        GerarEdital = 68,
+        EditalConcluido = 69
+
+    }
+}

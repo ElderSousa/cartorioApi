@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6800C11B-5997-4DE9-9666-A59D5748405F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjetoBase</RootNamespace>
+    <AssemblyName>ProjetoBase</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.0.0.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomControl\BackgroundWorkerCC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomControl.cs" />
+    <Compile Include="CustomControl\DataGridView\DataGridViewCC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\Form\BotaoAcaoCC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\Form\FlowLayoutPanelBotoesCC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\Form\FormCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomControl\Form\InterfaceMenu.cs" />
+    <Compile Include="CustomControl\Form\LayoutManager.cs" />
+    <Compile Include="CustomControl\Form\MenuCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomControl\Form\MenuCC.Designer.cs">
+      <DependentUpon>MenuCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\Form\MenuStripCC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\Input\BotaoCC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\Input\PictureBoxButtonCC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\Input\SeletorCC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\Input\SeletorCC.designer.cs">
+      <DependentUpon>SeletorCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\Input\TextboxLabelCC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\Validacao\ValidacaoDadosObrigatorios.cs" />
+    <Compile Include="CustomControl\Validacao\ValidacaoNivelDeAcesso.cs" />
+    <Compile Include="CustomControl\Validacao\ValidacaoTextBox.cs" />
+    <Compile Include="CustomControl\ValorManager.cs" />
+    <Compile Include="DataBase\Dominio\Funcionario\Cargo.cs" />
+    <Compile Include="DataBase\Dominio\Funcionario\Funcionario.cs" />
+    <Compile Include="DataBase\Dominio\Funcionario\NivelDeAcesso.cs" />
+    <Compile Include="DataBase\Dominio\Funcionario\NivelDeAcessoDinamico.cs" />
+    <Compile Include="DataBase\Dominio\Funcionario\NivelDeAcessoUsuario.cs" />
+    <Compile Include="DataBase\Dominio\Funcionario\PerfilDeAcesso.cs" />
+    <Compile Include="DataBase\Dominio\Funcionario\SessaoLogin.cs" />
+    <Compile Include="DataBase\Dominio\Funcionario\Usuario.cs" />
+    <Compile Include="DataBase\Ferramentas\ConfigurationFileCache.cs" />
+    <Compile Include="DataBase\Ferramentas\DeepTransformer.cs" />
+    <Compile Include="DataBase\Ferramentas\EntidadeManager.cs" />
+    <Compile Include="DataBase\Ferramentas\ICrud.cs" />
+    <Compile Include="DataBase\Ferramentas\Repositorio.cs" />
+    <Compile Include="DataBase\Ferramentas\Repositorios.cs" />
+    <Compile Include="DataBase\Ferramentas\SessionFactory.cs" />
+    <Compile Include="DataBase\Ferramentas\SqlStatementInterceptor.cs" />
+    <Compile Include="DataBase\Interface\ComboBoxInterface.cs" />
+    <Compile Include="DataBase\Interface\DeletavelInterface.cs" />
+    <Compile Include="DataBase\Interface\Entidade.cs" />
+    <Compile Include="DataBase\Mapeamento\Funcionario\CargoMap.cs" />
+    <Compile Include="DataBase\Mapeamento\Funcionario\FuncionarioMap.cs" />
+    <Compile Include="DataBase\Mapeamento\Funcionario\NivelDeAcessoDinamicoMap.cs" />
+    <Compile Include="DataBase\Mapeamento\Funcionario\NivelDeAcessoMap.cs" />
+    <Compile Include="DataBase\Mapeamento\Funcionario\NivelDeAcessoUsuarioMap.cs" />
+    <Compile Include="DataBase\Mapeamento\Funcionario\PerfilDeAcessoMap.cs" />
+    <Compile Include="DataBase\Mapeamento\Funcionario\SessaoLoginMap.cs" />
+    <Compile Include="DataBase\Mapeamento\Funcionario\UsuarioMap.cs" />
+    <Compile Include="Enumeradores\EnumNivelDeAcesso.cs" />
+    <Compile Include="Enumeradores\EnumResultadoQuery.cs" />
+    <Compile Include="Enumeradores\EnumTamanhoTextBox.cs" />
+    <Compile Include="Enumeradores\EnumTipoBotao.cs" />
+    <Compile Include="Enumeradores\EnumTipoBotaoAcao.cs" />
+    <Compile Include="Enumeradores\EnumTipoGroupBox.cs" />
+    <Compile Include="Enumeradores\EnumTipoSeletor.cs" />
+    <Compile Include="Enumeradores\EnumTipoTextBox.cs" />
+    <Compile Include="Exception\ExceptionManager.cs" />
+    <Compile Include="Exception\HistoricoException.cs" />
+    <Compile Include="Ferramentas\Config.cs" />
+    <Compile Include="Ferramentas\ConfigManager.cs" />
+    <Compile Include="Ferramentas\ExcecaoManager.cs" />
+    <Compile Include="Ferramentas\InstanciaServidor.cs" />
+    <Compile Include="Ferramentas\Serializacao.cs" />
+    <Compile Include="Ferramentas\SessaoSistema.cs" />
+    <Compile Include="Ferramentas\VersaoTecnoCart.cs" />
+    <Compile Include="Formularios\Cargo\CargoCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Cargo\CargoCadastro.designer.cs">
+      <DependentUpon>CargoCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Cargo\CargoMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Cargo\CargoMenu.designer.cs">
+      <DependentUpon>CargoMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ferramentas\ReconectarBancoCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ferramentas\ReconectarBancoCadastro.designer.cs">
+      <DependentUpon>ReconectarBancoCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\MenuInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\MenuInicial.Designer.cs">
+      <DependentUpon>MenuInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Seletor\ListarSeletores.cs" />
+    <Compile Include="Formularios\Seletor\ListaSeletorModoEscrita.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\Seletor\ListaSeletorModoEscrita.designer.cs">
+      <DependentUpon>ListaSeletorModoEscrita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Seletor\Seletor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Seletor\Seletor.designer.cs">
+      <DependentUpon>Seletor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ValidacaoAcao\ValidacaoAcao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ValidacaoAcao\ValidacaoAcao.designer.cs">
+      <DependentUpon>ValidacaoAcao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomControl\Form\FormCC.resx">
+      <DependentUpon>FormCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\Form\MenuCC.resx">
+      <DependentUpon>MenuCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\Input\SeletorCC.resx">
+      <DependentUpon>SeletorCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Cargo\CargoCadastro.resx">
+      <DependentUpon>CargoCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Cargo\CargoMenu.resx">
+      <DependentUpon>CargoMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ferramentas\ReconectarBancoCadastro.resx">
+      <DependentUpon>ReconectarBancoCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\MenuInicial.resx">
+      <DependentUpon>MenuInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Seletor\ListaSeletorModoEscrita.resx">
+      <DependentUpon>ListaSeletorModoEscrita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Seletor\Seletor.resx">
+      <DependentUpon>Seletor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ValidacaoAcao\ValidacaoAcao.resx">
+      <DependentUpon>ValidacaoAcao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_btn_cadastrar_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_btn_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_btn_cadastrar_preto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_btn_deletar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_btn_deletar_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_btn_deletar_preto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_btn_editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_btn_editar_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_btn_editar_preto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_btn_cadastrar.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
