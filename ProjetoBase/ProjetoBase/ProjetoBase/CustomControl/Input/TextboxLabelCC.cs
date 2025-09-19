@@ -1012,7 +1012,7 @@ namespace ProjetoBase.CustomControls
                     valorStr = valorStr.Replace(" ", "");
                     valor = Convert.ToDecimal(valorStr);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
                 }

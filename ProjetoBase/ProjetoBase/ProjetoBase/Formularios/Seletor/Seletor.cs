@@ -362,7 +362,7 @@ namespace ProjetoBase.Formularios
         {
 
 
-            switch (tipoSeletor)
+            /*switch (tipoSeletor)
             {
                
           
@@ -374,7 +374,7 @@ namespace ProjetoBase.Formularios
 
 
                
-            }
+            }*/
 
         }
 

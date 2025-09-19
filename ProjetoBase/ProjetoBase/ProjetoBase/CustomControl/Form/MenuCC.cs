@@ -44,7 +44,6 @@ namespace ProjetoBase.CustomControl.Form
                 // salvarTamanhoDataGridView();
                 CargoMenu CargoMenu = new CargoMenu();
                 CargoMenu.Show();
-                fecharMenu();
             //}
         }
 

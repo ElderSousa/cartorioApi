@@ -33,8 +33,6 @@ namespace ProjetoBase.Ferramentas
 
         public static Boolean execaoNaoIgnorada(Exception ex)
         {
-            return true;
-
             //SOMENTE PARA ENCONTRAR FORMATOS BUGADOS
             if (ex.Message == "Erro genérico de GDI+." && ex.StackTrace?.Contains("GMapControl") == true)
             {

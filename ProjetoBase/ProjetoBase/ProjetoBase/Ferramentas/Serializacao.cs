@@ -105,7 +105,7 @@ namespace ProjetoBase.Ferramentas
                 myFileStream.Close();
                 return objetoDeserializado;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 if (myFileStream != null)
                 {

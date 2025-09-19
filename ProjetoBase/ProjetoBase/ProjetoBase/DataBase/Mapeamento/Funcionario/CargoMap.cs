@@ -14,7 +14,7 @@ namespace ProjetoBase.DataBase.Mapeamento
         public CargoMap()
         {
             Id(x => x.Id).GeneratedBy.Identity();
-            Map(x => x.Nome).Length(10);
+            Map(x => x.Nome).Length(255);
             Table("CARGO");            
         }
     }

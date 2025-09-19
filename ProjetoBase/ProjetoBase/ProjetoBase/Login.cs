@@ -28,9 +28,8 @@ namespace ProjetoBase
         private void btn_logar_Click(object sender, EventArgs e)
         {
             SessionFactory.UnflushedSession();
-            MenuInicial MenuInicial = new MenuInicial();
-            MenuInicial.Show();
-            this.Hide();
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

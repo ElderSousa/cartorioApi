@@ -457,10 +457,10 @@ namespace ProjetoBase.CustomControls
         {
             FormCC formularioEdit = null;
 
-            switch (tipoSeletor)
+            /*switch (tipoSeletor)
             {
                
-            }
+            }*/
 
             if (formularioEdit != null)
             {

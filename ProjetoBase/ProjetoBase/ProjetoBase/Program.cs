@@ -16,7 +16,13 @@ namespace ProjetoBase
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+
+            Login formLogin = new Login();
+
+            if (formLogin.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new MenuInicial());
+            }
         }
     }
 }

@@ -25,7 +25,8 @@ namespace ProjetoBase.Formularios
 
         public static IList<Cargo> getListaCargo(String filtro)
         {
-            IList<Cargo> lista = getSessao().QueryOver<Cargo>().Where(x => x.Id == convertFromString(filtro) || x.Nome.IsInsensitiveLike(filtro, MatchMode.Anywhere)).List();
+            IList<Cargo> lista = getSessao().QueryOver<Cargo>()
+                .Where(x => x.Id == convertFromString(filtro) || x.Nome.IsInsensitiveLike(filtro, MatchMode.Anywhere)).List();
             return lista;
         }
 

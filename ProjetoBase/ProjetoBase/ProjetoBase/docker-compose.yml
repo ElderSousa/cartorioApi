@@ -1,0 +1,24 @@
+﻿# Versão da sintaxe do Docker Compose
+version: '3.8'
+
+# Lista de serviços (contêineres)
+services:
+  sqlserver-db:
+    # Imagem oficial do SQL Server 2022
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver-projeto-base
+    environment:
+      # Aceitar os termos de licença
+      ACCEPT_EULA: "Y"
+      # DEFINA SUA SENHA AQUI!
+      SA_PASSWORD: "Po77TE6g"
+    ports:
+      # Mapeia a porta do contêiner para a porta do seu PC
+      - "1433:1433"
+    volumes:
+      # Garante que os dados sejam salvos permanentemente
+      - sqldata:/var/opt/mssql
+
+# Declaração do volume
+volumes:
+  sqldata: {}
