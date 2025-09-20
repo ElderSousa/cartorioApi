@@ -102,6 +102,10 @@ namespace ProjetoBase.CustomControl.Form
             }
         }
 
-    
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ClienteMenu formClientes = new ClienteMenu();
+            formClientes.Show();
+        }
     }
 }

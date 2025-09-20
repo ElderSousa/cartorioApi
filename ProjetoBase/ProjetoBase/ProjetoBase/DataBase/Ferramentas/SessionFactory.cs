@@ -175,7 +175,7 @@ namespace ProjetoBase.DataBase
                     .Mappings(m => 
                         // Diz ao NHibernate para encontrar todas as classes de mapeamento (como CargoMap)
                         // no mesmo assembly (projeto) onde 'CargoMap' está.
-                        m.FluentMappings.AddFromAssemblyOf<CargoMap>()
+                        m.FluentMappings.AddFromAssemblyOf<ClienteMap>()
                     )
                     // 3. Expõe configurações avançadas do NHibernate.
                     .ExposeConfiguration(cfg =>
