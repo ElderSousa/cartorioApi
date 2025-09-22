@@ -45,7 +45,8 @@ C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBa
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.CustomControls.SeletorCC.resources
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.CargoCadastro.resources
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.CargoMenu.resources
-C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.ClienteMenu.resources
+C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.Clientes.ClienteCadastro.resources
+C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.Clientes.ClienteMenu.resources
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.Ferramentas.ReconectarBancoCadastro.resources
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.MenuInicial.resources
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.CustomControls.ListaSeletorModoEscrita.resources
@@ -58,4 +59,3 @@ C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBa
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoB.0A5380EA.Up2Date
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.exe
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.pdb
-C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.exe.config

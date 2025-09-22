@@ -9,6 +9,7 @@ namespace ProjetoBase.Enumeradores
     //Referente ao tipo do controle BotaoAcaoCC
     public enum EnumTipoBotaoAcao
     {
+        Default= 0,
         Cadastrar = 1,
         Alterar = 2,
         Deletar = 3,     

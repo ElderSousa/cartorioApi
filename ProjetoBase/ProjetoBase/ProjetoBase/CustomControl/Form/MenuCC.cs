@@ -11,6 +11,7 @@ using ProjetoBase.CustomControls.Input;
 using ProjetoBase.CustomControls.Validacao;
 using ProjetoBase.Enumeradores;
 using ProjetoBase.Formularios;
+using ProjetoBase.Formularios.Clientes;
 
 namespace ProjetoBase.CustomControl.Form
 {

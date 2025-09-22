@@ -173,10 +173,16 @@
     <Compile Include="Formularios\Cargo\CargoMenu.designer.cs">
       <DependentUpon>CargoMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Cliente\ClienteMenu.cs">
+    <Compile Include="Formularios\Clientes\ClienteCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Cliente\ClienteMenu.Designer.cs">
+    <Compile Include="Formularios\Clientes\ClienteCadastro.Designer.cs">
+      <DependentUpon>ClienteCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Clientes\ClienteMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Clientes\ClienteMenu.Designer.cs">
       <DependentUpon>ClienteMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Ferramentas\ReconectarBancoCadastro.cs">
@@ -233,7 +239,10 @@
     <EmbeddedResource Include="Formularios\Cargo\CargoMenu.resx">
       <DependentUpon>CargoMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Cliente\ClienteMenu.resx">
+    <EmbeddedResource Include="Formularios\Clientes\ClienteCadastro.resx">
+      <DependentUpon>ClienteCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Clientes\ClienteMenu.resx">
       <DependentUpon>ClienteMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Ferramentas\ReconectarBancoCadastro.resx">
