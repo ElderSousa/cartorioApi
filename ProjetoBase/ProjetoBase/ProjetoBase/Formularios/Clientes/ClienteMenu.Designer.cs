@@ -33,29 +33,27 @@
             this.btnExcluir = new ProjetoBase.CustomControls.BotaoCC();
             this.btnAlterar = new ProjetoBase.CustomControls.BotaoCC();
             this.btnNovo = new ProjetoBase.CustomControls.BotaoCC();
-            this.botaoCC3 = new ProjetoBase.CustomControls.BotaoCC();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomePrincipal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomePessoaFisica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DocumentoPrincipal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomePessoaJuridica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ObjetoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colObjetoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlAcoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlAcoes
             // 
-            this.pnlAcoes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlAcoes.Controls.Add(this.btnExcluir);
             this.pnlAcoes.Controls.Add(this.btnAlterar);
             this.pnlAcoes.Controls.Add(this.btnNovo);
             this.pnlAcoes.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAcoes.Location = new System.Drawing.Point(0, 0);
             this.pnlAcoes.Name = "pnlAcoes";
-            this.pnlAcoes.Size = new System.Drawing.Size(800, 42);
+            this.pnlAcoes.Size = new System.Drawing.Size(800, 40);
             this.pnlAcoes.TabIndex = 1;
             // 
             // dgvClientes
@@ -64,20 +62,20 @@
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Tipo,
-            this.NomePrincipal,
+            this.NomePessoaFisica,
             this.CPF,
-            this.DocumentoPrincipal,
+            this.NomePessoaJuridica,
             this.CNPJ,
             this.Email,
-            this.ObjetoCliente});
+            this.colObjetoCliente});
             this.dgvClientes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvClientes.Location = new System.Drawing.Point(0, 42);
+            this.dgvClientes.Location = new System.Drawing.Point(0, 40);
             this.dgvClientes.MultiSelect = false;
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.NomeDisplay = null;
             this.dgvClientes.Obrigatorio = false;
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientes.Size = new System.Drawing.Size(800, 408);
+            this.dgvClientes.Size = new System.Drawing.Size(800, 410);
             this.dgvClientes.SomenteLeitura = false;
             this.dgvClientes.TabIndex = 0;
             // 
@@ -85,10 +83,10 @@
             // 
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
-            this.btnExcluir.Location = new System.Drawing.Point(197, 3);
+            this.btnExcluir.Location = new System.Drawing.Point(199, 7);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.NivelDeAcesso = null;
-            this.btnExcluir.Size = new System.Drawing.Size(87, 30);
+            this.btnExcluir.Size = new System.Drawing.Size(91, 25);
             this.btnExcluir.TabIndex = 2;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TipoBotao = ProjetoBase.Enumeradores.TipoBotao.Default;
@@ -99,11 +97,10 @@
             // 
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
-            this.btnAlterar.Location = new System.Drawing.Point(105, 3);
+            this.btnAlterar.Location = new System.Drawing.Point(107, 7);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.NivelDeAcesso = null;
-            this.btnAlterar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAlterar.Size = new System.Drawing.Size(86, 30);
+            this.btnAlterar.Size = new System.Drawing.Size(86, 25);
             this.btnAlterar.TabIndex = 1;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TipoBotao = ProjetoBase.Enumeradores.TipoBotao.Default;
@@ -114,28 +111,16 @@
             // 
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
-            this.btnNovo.Location = new System.Drawing.Point(10, 3);
+            this.btnNovo.Location = new System.Drawing.Point(12, 7);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.NivelDeAcesso = null;
-            this.btnNovo.Size = new System.Drawing.Size(89, 30);
+            this.btnNovo.Size = new System.Drawing.Size(89, 25);
             this.btnNovo.TabIndex = 0;
             this.btnNovo.Text = "Novo";
+            this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnNovo.TipoBotao = ProjetoBase.Enumeradores.TipoBotao.Default;
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
-            // 
-            // botaoCC3
-            // 
-            this.botaoCC3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoCC3.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
-            this.botaoCC3.Location = new System.Drawing.Point(197, 3);
-            this.botaoCC3.Name = "botaoCC3";
-            this.botaoCC3.NivelDeAcesso = null;
-            this.botaoCC3.Size = new System.Drawing.Size(89, 30);
-            this.botaoCC3.TabIndex = 2;
-            this.botaoCC3.Text = "botaoCC3";
-            this.botaoCC3.TipoBotao = ProjetoBase.Enumeradores.TipoBotao.Default;
-            this.botaoCC3.UseVisualStyleBackColor = true;
             // 
             // ID
             // 
@@ -149,11 +134,11 @@
             this.Tipo.HeaderText = "Tipo";
             this.Tipo.Name = "Tipo";
             // 
-            // NomePrincipal
+            // NomePessoaFisica
             // 
-            this.NomePrincipal.DataPropertyName = "NomePrincipal";
-            this.NomePrincipal.HeaderText = "NomePrincipal";
-            this.NomePrincipal.Name = "NomePrincipal";
+            this.NomePessoaFisica.DataPropertyName = "NomePessoaFisica";
+            this.NomePessoaFisica.HeaderText = "NomePessoaFisica";
+            this.NomePessoaFisica.Name = "NomePessoaFisica";
             // 
             // CPF
             // 
@@ -161,11 +146,11 @@
             this.CPF.HeaderText = "CPF";
             this.CPF.Name = "CPF";
             // 
-            // DocumentoPrincipal
+            // NomePessoaJuridica
             // 
-            this.DocumentoPrincipal.DataPropertyName = "DocumentoPrincipal";
-            this.DocumentoPrincipal.HeaderText = "DocumentoPrincipal";
-            this.DocumentoPrincipal.Name = "DocumentoPrincipal";
+            this.NomePessoaJuridica.DataPropertyName = "NomePessoaJuridica";
+            this.NomePessoaJuridica.HeaderText = "NomePessoaJuridica";
+            this.NomePessoaJuridica.Name = "NomePessoaJuridica";
             // 
             // CNPJ
             // 
@@ -179,11 +164,11 @@
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             // 
-            // ObjetoCliente
+            // colObjetoCliente
             // 
-            this.ObjetoCliente.DataPropertyName = "ObjetoCliente";
-            this.ObjetoCliente.HeaderText = "ObjetoCliente";
-            this.ObjetoCliente.Name = "ObjetoCliente";
+            this.colObjetoCliente.DataPropertyName = "ObjetoCliente";
+            this.colObjetoCliente.HeaderText = "ObjetoCliente";
+            this.colObjetoCliente.Name = "colObjetoCliente";
             // 
             // ClienteMenu
             // 
@@ -205,17 +190,16 @@
 
         private CustomControls.Input.DataGridViewCC dgvClientes;
         private System.Windows.Forms.Panel pnlAcoes;
+        private CustomControls.BotaoCC btnExcluir;
         private CustomControls.BotaoCC btnAlterar;
         private CustomControls.BotaoCC btnNovo;
-        private CustomControls.BotaoCC botaoCC3;
-        private CustomControls.BotaoCC btnExcluir;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomePrincipal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomePessoaFisica;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DocumentoPrincipal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomePessoaJuridica;
         private System.Windows.Forms.DataGridViewTextBoxColumn CNPJ;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ObjetoCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colObjetoCliente;
     }
 }

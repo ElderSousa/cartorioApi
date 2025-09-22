@@ -2,12 +2,7 @@
 using ProjetoBase.DataBase.Dominio;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoBase.Formularios.Clientes
@@ -17,59 +12,58 @@ namespace ProjetoBase.Formularios.Clientes
         public ClienteMenu()
         {
             InitializeComponent();
-
             this.dgvClientes.AutoGenerateColumns = false;
         }
 
         private void ClienteMenu_Load(object sender, EventArgs e)
-        { 
+        {
             CarregarClientes();
         }
 
         public void CarregarClientes()
         {
-            // Busca a lista de Clientes
             IList<Cliente> clientes = SessionFactory.Session().QueryOver<Cliente>().List();
 
-            // Prepara a tabela em memória para exibir os dados
             DataTable dt = new DataTable();
             dt.Columns.Add("ID");
             dt.Columns.Add("Tipo");
-            dt.Columns.Add("NomePrincipal");
-            dt.Columns.Add("DocumentoPrincipal");
+            dt.Columns.Add("NomePessoaFisica");
             dt.Columns.Add("CPF");
+            dt.Columns.Add("NomePessoaJuridica");
             dt.Columns.Add("CNPJ");
             dt.Columns.Add("Email");
             dt.Columns.Add("ObjetoCliente", typeof(Cliente));
 
-            // Itera sobre a lista e adiciona na DataTable
             foreach (var cliente in clientes)
             {
                 if (cliente.Tipo == "PF")
                 {
                     dt.Rows.Add(
-                    cliente.Id,
-                    "Física",
-                    cliente.Nome,
-                    cliente.Cpf,
-                    cliente.Email,
-                    cliente
+                        cliente.Id,
+                        "Física",
+                        cliente.Nome,
+                        cliente.Cpf,
+                        null,
+                        null,
+                        cliente.Email,
+                        cliente
                     );
                 }
                 else if (cliente.Tipo == "PJ")
                 {
                     dt.Rows.Add(
-                    cliente.Id,
-                    "Jurídica",
-                    cliente.RazaoSocial,
-                    cliente.Cnpj,
-                    cliente.Email,
-                    cliente
+                        cliente.Id,
+                        "Jurídica",
+                        null,
+                        null,
+                        cliente.RazaoSocial,
+                        cliente.Cnpj,
+                        cliente.Email,
+                        cliente
                     );
                 }
             }
 
-            // Associa os dados à tabela na tela
             dgvClientes.DataSource = dt;
         }
 
@@ -104,7 +98,7 @@ namespace ProjetoBase.Formularios.Clientes
                 return;
             }
 
-            DialogResult resposta = MessageBox.Show("Tem certeza que deseja excluir este cliente? Esta ação não pode ser desfeita.", "Confirmar Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult resposta = MessageBox.Show("Tem certeza que deseja excluir este cliente?", "Confirmar Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (resposta == DialogResult.Yes)
             {
