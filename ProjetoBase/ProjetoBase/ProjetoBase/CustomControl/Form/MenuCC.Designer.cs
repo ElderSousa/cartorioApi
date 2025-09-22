@@ -36,6 +36,7 @@ namespace ProjetoBase.CustomControl.Form
             this.cargoToolStripMenuItem = new ProjetoBase.CustomControls.ToolStripMenuItemCC();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorkerUpdate = new ProjetoBase.CustomControls.BackgroundWorkerCC();
+            this.funcionariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +54,8 @@ namespace ProjetoBase.CustomControl.Form
             // cadastroToolStripMenuItem
             // 
             this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rHToolStripMenuItem});
+            this.rHToolStripMenuItem,
+            this.funcionariosToolStripMenuItem});
             this.cadastroToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.cadastroToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
@@ -80,7 +82,7 @@ namespace ProjetoBase.CustomControl.Form
             this.cargoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.cargoToolStripMenuItem.Name = "cargoToolStripMenuItem";
             this.cargoToolStripMenuItem.NivelDeAcesso = null;
-            this.cargoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cargoToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.cargoToolStripMenuItem.Text = "Cargo";
             this.cargoToolStripMenuItem.Click += new System.EventHandler(this.cargoToolStripMenuItem_Click);
             // 
@@ -89,9 +91,16 @@ namespace ProjetoBase.CustomControl.Form
             this.clientesToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlText;
             this.clientesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
+            // 
+            // funcionariosToolStripMenuItem
+            // 
+            this.funcionariosToolStripMenuItem.Name = "funcionariosToolStripMenuItem";
+            this.funcionariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.funcionariosToolStripMenuItem.Text = "Funcionarios";
+            this.funcionariosToolStripMenuItem.Click += new System.EventHandler(this.funcionariosToolStripMenuItem_Click);
             // 
             // MenuCC
             // 
@@ -121,5 +130,6 @@ namespace ProjetoBase.CustomControl.Form
         private ToolStripMenuItemCC cargoToolStripMenuItem;
         public BackgroundWorkerCC backgroundWorkerUpdate;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem funcionariosToolStripMenuItem;
     }
 }

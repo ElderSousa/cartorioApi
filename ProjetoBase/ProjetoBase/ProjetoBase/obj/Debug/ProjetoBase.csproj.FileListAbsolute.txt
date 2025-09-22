@@ -60,3 +60,4 @@ C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBa
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.exe
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.pdb
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.exe.config
+C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.Funcionarios.FuncionarioCadastro.resources

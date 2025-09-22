@@ -1,4 +1,11 @@
-﻿using System;
+﻿using ProjetoBase.CustomControls;
+using ProjetoBase.CustomControls.Input;
+using ProjetoBase.CustomControls.Validacao;
+using ProjetoBase.Enumeradores;
+using ProjetoBase.Formularios;
+using ProjetoBase.Formularios.Clientes;
+using ProjetoBase.Formularios.Funcionarios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,12 +13,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using ProjetoBase.CustomControls;
-using ProjetoBase.CustomControls.Input;
-using ProjetoBase.CustomControls.Validacao;
-using ProjetoBase.Enumeradores;
-using ProjetoBase.Formularios;
-using ProjetoBase.Formularios.Clientes;
 
 namespace ProjetoBase.CustomControl.Form
 {
@@ -107,6 +108,12 @@ namespace ProjetoBase.CustomControl.Form
         {
             ClienteMenu formClientes = new ClienteMenu();
             formClientes.Show();
+        }
+
+        private void funcionariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FuncionarioCadastro formCadastro = new FuncionarioCadastro();
+            formCadastro.ShowDialog();
         }
     }
 }

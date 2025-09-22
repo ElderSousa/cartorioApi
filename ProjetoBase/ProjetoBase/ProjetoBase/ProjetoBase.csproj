@@ -116,6 +116,7 @@
     <Compile Include="CustomControl\ValorManager.cs" />
     <Compile Include="DataBase\Dominio\Cliente.cs" />
     <Compile Include="DataBase\Dominio\Funcionario\Cargo.cs" />
+    <Compile Include="DataBase\Dominio\Funcionario\CriptografiaHelper.cs" />
     <Compile Include="DataBase\Dominio\Funcionario\Funcionario.cs" />
     <Compile Include="DataBase\Dominio\Funcionario\NivelDeAcesso.cs" />
     <Compile Include="DataBase\Dominio\Funcionario\NivelDeAcessoDinamico.cs" />
@@ -191,6 +192,12 @@
     <Compile Include="Formularios\Ferramentas\ReconectarBancoCadastro.designer.cs">
       <DependentUpon>ReconectarBancoCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Funcionarios\FuncionarioCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Funcionarios\FuncionarioCadastro.Designer.cs">
+      <DependentUpon>FuncionarioCadastro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\MenuInicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Ferramentas\ReconectarBancoCadastro.resx">
       <DependentUpon>ReconectarBancoCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Funcionarios\FuncionarioCadastro.resx">
+      <DependentUpon>FuncionarioCadastro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\MenuInicial.resx">
       <DependentUpon>MenuInicial.cs</DependentUpon>
@@ -318,6 +328,7 @@
   <ItemGroup>
     <None Include="Resources\Icon_btn_cadastrar.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
