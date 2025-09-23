@@ -48,7 +48,10 @@ C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBa
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.Clientes.ClienteCadastro.resources
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.Clientes.ClienteMenu.resources
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.Ferramentas.ReconectarBancoCadastro.resources
+C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.Funcionarios.FuncionarioCadastro.resources
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.MenuInicial.resources
+C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.NiveisAcessoMenu.NivelDeAcessoCadastro.resources
+C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.NiveisAcessoMenu.NivelDeAcessoMenu.resources
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.CustomControls.ListaSeletorModoEscrita.resources
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.Seletor.resources
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.Ferramentas.ValidacaoAcao.resources
@@ -59,5 +62,3 @@ C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBa
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoB.0A5380EA.Up2Date
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.exe
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.pdb
-C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.exe.config
-C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.Funcionarios.FuncionarioCadastro.resources

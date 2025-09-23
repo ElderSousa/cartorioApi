@@ -13,7 +13,7 @@ namespace ProjetoBase.DataBase.Mapeamento
     {
         public NivelDeAcessoMap()
         {
-            Id(x => x.Id).GeneratedBy.Assigned();
+            Id(x => x.Id).GeneratedBy.Identity();
             Map(x => x.Nome);
             Table("NIVEL_DE_ACESSO");            
         }

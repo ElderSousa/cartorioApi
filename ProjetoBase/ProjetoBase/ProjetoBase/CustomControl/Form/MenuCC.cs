@@ -5,6 +5,7 @@ using ProjetoBase.Enumeradores;
 using ProjetoBase.Formularios;
 using ProjetoBase.Formularios.Clientes;
 using ProjetoBase.Formularios.Funcionarios;
+using ProjetoBase.Formularios.NiveisAcessoMenu;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -114,6 +115,12 @@ namespace ProjetoBase.CustomControl.Form
         {
             FuncionarioCadastro formCadastro = new FuncionarioCadastro();
             formCadastro.ShowDialog();
+        }
+
+        private void nivelDeAcessoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NivelDeAcessoMenu formNiveis = new NivelDeAcessoMenu();
+            formNiveis.Show();
         }
     }
 }

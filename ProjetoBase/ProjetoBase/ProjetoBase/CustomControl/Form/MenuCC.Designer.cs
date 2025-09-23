@@ -35,8 +35,9 @@ namespace ProjetoBase.CustomControl.Form
             this.rHToolStripMenuItem = new ProjetoBase.CustomControls.ToolStripMenuItemCC();
             this.cargoToolStripMenuItem = new ProjetoBase.CustomControls.ToolStripMenuItemCC();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backgroundWorkerUpdate = new ProjetoBase.CustomControls.BackgroundWorkerCC();
             this.funcionariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backgroundWorkerUpdate = new ProjetoBase.CustomControls.BackgroundWorkerCC();
+            this.nivelDeAcessoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +56,8 @@ namespace ProjetoBase.CustomControl.Form
             // 
             this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rHToolStripMenuItem,
-            this.funcionariosToolStripMenuItem});
+            this.funcionariosToolStripMenuItem,
+            this.nivelDeAcessoToolStripMenuItem});
             this.cadastroToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.cadastroToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
@@ -102,6 +104,13 @@ namespace ProjetoBase.CustomControl.Form
             this.funcionariosToolStripMenuItem.Text = "Funcionarios";
             this.funcionariosToolStripMenuItem.Click += new System.EventHandler(this.funcionariosToolStripMenuItem_Click);
             // 
+            // nivelDeAcessoToolStripMenuItem
+            // 
+            this.nivelDeAcessoToolStripMenuItem.Name = "nivelDeAcessoToolStripMenuItem";
+            this.nivelDeAcessoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nivelDeAcessoToolStripMenuItem.Text = "Nivel de acesso";
+            this.nivelDeAcessoToolStripMenuItem.Click += new System.EventHandler(this.nivelDeAcessoToolStripMenuItem_Click);
+            // 
             // MenuCC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,5 +140,6 @@ namespace ProjetoBase.CustomControl.Form
         public BackgroundWorkerCC backgroundWorkerUpdate;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem funcionariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nivelDeAcessoToolStripMenuItem;
     }
 }

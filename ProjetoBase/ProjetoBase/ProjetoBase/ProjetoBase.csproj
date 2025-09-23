@@ -204,6 +204,18 @@
     <Compile Include="Formularios\MenuInicial.Designer.cs">
       <DependentUpon>MenuInicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\NiveisAcessoMenu\NivelDeAcessoCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\NiveisAcessoMenu\NivelDeAcessoCadastro.Designer.cs">
+      <DependentUpon>NivelDeAcessoCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\NiveisAcessoMenu\NivelDeAcessoMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\NiveisAcessoMenu\NivelDeAcessoMenu.Designer.cs">
+      <DependentUpon>NivelDeAcessoMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Seletor\ListarSeletores.cs" />
     <Compile Include="Formularios\Seletor\ListaSeletorModoEscrita.cs">
       <SubType>UserControl</SubType>
@@ -260,6 +272,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\MenuInicial.resx">
       <DependentUpon>MenuInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\NiveisAcessoMenu\NivelDeAcessoCadastro.resx">
+      <DependentUpon>NivelDeAcessoCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\NiveisAcessoMenu\NivelDeAcessoMenu.resx">
+      <DependentUpon>NivelDeAcessoMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Seletor\ListaSeletorModoEscrita.resx">
       <DependentUpon>ListaSeletorModoEscrita.cs</DependentUpon>

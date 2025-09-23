@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbCargo = new System.Windows.Forms.ComboBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
+            this.txtRg = new System.Windows.Forms.TextBox();
+            this.mtbCpf = new System.Windows.Forms.MaskedTextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.mtbCpf = new System.Windows.Forms.MaskedTextBox();
-            this.txtRg = new System.Windows.Forms.TextBox();
-            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.cmbCargo = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtLogin = new System.Windows.Forms.TextBox();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
-            this.cmbPerfilAcesso = new System.Windows.Forms.ComboBox();
             this.clbNiveisAcesso = new System.Windows.Forms.CheckedListBox();
+            this.cmbPerfilAcesso = new System.Windows.Forms.ComboBox();
+            this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.txtLogin = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnSalvar = new ProjetoBase.CustomControls.BotaoCC();
             this.btnCancelar = new ProjetoBase.CustomControls.BotaoCC();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +78,70 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Pessoais";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 95);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "RG";
+            // 
+            // cmbCargo
+            // 
+            this.cmbCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCargo.FormattingEnabled = true;
+            this.cmbCargo.Location = new System.Drawing.Point(47, 207);
+            this.cmbCargo.Name = "cmbCargo";
+            this.cmbCargo.Size = new System.Drawing.Size(121, 21);
+            this.cmbCargo.TabIndex = 13;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(44, 168);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtEmail.TabIndex = 12;
+            // 
+            // dtpNascimento
+            // 
+            this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNascimento.Location = new System.Drawing.Point(91, 123);
+            this.dtpNascimento.Name = "dtpNascimento";
+            this.dtpNascimento.Size = new System.Drawing.Size(99, 20);
+            this.dtpNascimento.TabIndex = 11;
+            // 
+            // txtRg
+            // 
+            this.txtRg.Location = new System.Drawing.Point(32, 88);
+            this.txtRg.Name = "txtRg";
+            this.txtRg.Size = new System.Drawing.Size(100, 20);
+            this.txtRg.TabIndex = 10;
+            // 
+            // mtbCpf
+            // 
+            this.mtbCpf.Location = new System.Drawing.Point(39, 56);
+            this.mtbCpf.Mask = "000.000.000-00";
+            this.mtbCpf.Name = "mtbCpf";
+            this.mtbCpf.Size = new System.Drawing.Size(100, 20);
+            this.mtbCpf.TabIndex = 9;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Location = new System.Drawing.Point(39, 19);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(100, 20);
+            this.txtNome.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Nome";
             // 
             // label6
             // 
@@ -134,128 +198,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados de Acesso";
             // 
-            // label1
+            // clbNiveisAcesso
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Nome";
-            // 
-            // txtNome
-            // 
-            this.txtNome.Location = new System.Drawing.Point(39, 19);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(100, 20);
-            this.txtNome.TabIndex = 8;
-            // 
-            // mtbCpf
-            // 
-            this.mtbCpf.Location = new System.Drawing.Point(39, 56);
-            this.mtbCpf.Mask = "000.000.000-00";
-            this.mtbCpf.Name = "mtbCpf";
-            this.mtbCpf.Size = new System.Drawing.Size(100, 20);
-            this.mtbCpf.TabIndex = 9;
-            // 
-            // txtRg
-            // 
-            this.txtRg.Location = new System.Drawing.Point(32, 88);
-            this.txtRg.Name = "txtRg";
-            this.txtRg.Size = new System.Drawing.Size(100, 20);
-            this.txtRg.TabIndex = 10;
-            // 
-            // dtpNascimento
-            // 
-            this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNascimento.Location = new System.Drawing.Point(91, 123);
-            this.dtpNascimento.Name = "dtpNascimento";
-            this.dtpNascimento.Size = new System.Drawing.Size(99, 20);
-            this.dtpNascimento.TabIndex = 11;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(44, 168);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 20);
-            this.txtEmail.TabIndex = 12;
-            // 
-            // cmbCargo
-            // 
-            this.cmbCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCargo.FormattingEnabled = true;
-            this.cmbCargo.Location = new System.Drawing.Point(47, 207);
-            this.cmbCargo.Name = "cmbCargo";
-            this.cmbCargo.Size = new System.Drawing.Size(121, 21);
-            this.cmbCargo.TabIndex = 13;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 26);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Login";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 59);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 13);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Senha";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 95);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 13);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Confirmar Senha:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 130);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 13);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Níveis de Acesso:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 175);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 13);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "Perfil Padrão:";
-            // 
-            // txtLogin
-            // 
-            this.txtLogin.Location = new System.Drawing.Point(45, 23);
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(100, 20);
-            this.txtLogin.TabIndex = 5;
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.Location = new System.Drawing.Point(50, 53);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(100, 20);
-            this.txtSenha.TabIndex = 6;
-            // 
-            // txtConfirmarSenha
-            // 
-            this.txtConfirmarSenha.Location = new System.Drawing.Point(100, 92);
-            this.txtConfirmarSenha.Name = "txtConfirmarSenha";
-            this.txtConfirmarSenha.PasswordChar = '*';
-            this.txtConfirmarSenha.Size = new System.Drawing.Size(100, 20);
-            this.txtConfirmarSenha.TabIndex = 7;
+            this.clbNiveisAcesso.FormattingEnabled = true;
+            this.clbNiveisAcesso.Location = new System.Drawing.Point(106, 129);
+            this.clbNiveisAcesso.Name = "clbNiveisAcesso";
+            this.clbNiveisAcesso.Size = new System.Drawing.Size(110, 19);
+            this.clbNiveisAcesso.TabIndex = 9;
             // 
             // cmbPerfilAcesso
             // 
@@ -266,16 +215,77 @@
             this.cmbPerfilAcesso.Size = new System.Drawing.Size(121, 21);
             this.cmbPerfilAcesso.TabIndex = 8;
             // 
-            // clbNiveisAcesso
+            // txtConfirmarSenha
             // 
-            this.clbNiveisAcesso.FormattingEnabled = true;
-            this.clbNiveisAcesso.Location = new System.Drawing.Point(106, 129);
-            this.clbNiveisAcesso.Name = "clbNiveisAcesso";
-            this.clbNiveisAcesso.Size = new System.Drawing.Size(19, 19);
-            this.clbNiveisAcesso.TabIndex = 9;
+            this.txtConfirmarSenha.Location = new System.Drawing.Point(100, 92);
+            this.txtConfirmarSenha.Name = "txtConfirmarSenha";
+            this.txtConfirmarSenha.PasswordChar = '*';
+            this.txtConfirmarSenha.Size = new System.Drawing.Size(100, 20);
+            this.txtConfirmarSenha.TabIndex = 7;
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.Location = new System.Drawing.Point(50, 53);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.Size = new System.Drawing.Size(100, 20);
+            this.txtSenha.TabIndex = 6;
+            // 
+            // txtLogin
+            // 
+            this.txtLogin.Location = new System.Drawing.Point(45, 23);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(100, 20);
+            this.txtLogin.TabIndex = 5;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 175);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(70, 13);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Perfil Padrão:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 130);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 13);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Níveis de Acesso:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 95);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 13);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Confirmar Senha:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 59);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(38, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Senha";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 26);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(33, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Login";
             // 
             // btnSalvar
             // 
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
             this.btnSalvar.Location = new System.Drawing.Point(12, 279);
             this.btnSalvar.Name = "btnSalvar";
@@ -289,6 +299,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.Location = new System.Drawing.Point(138, 279);
             this.btnCancelar.Name = "btnCancelar";
@@ -299,15 +310,6 @@
             this.btnCancelar.TipoBotao = ProjetoBase.Enumeradores.TipoBotao.Default;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 95);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 13);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "RG";
             // 
             // FuncionarioCadastro
             // 
