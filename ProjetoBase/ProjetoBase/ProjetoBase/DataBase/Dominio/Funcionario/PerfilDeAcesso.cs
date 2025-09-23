@@ -26,5 +26,11 @@ namespace ProjetoBase.DataBase.Dominio.Funcionario
         {
             get { return this; }
         }
+
+        public PerfilDeAcesso()
+        {
+            // Inicializa a lista para que ela nunca seja nula
+            this.NivelDeAcesso = new HashSet<NivelDeAcesso>();
+        }
     }
 }

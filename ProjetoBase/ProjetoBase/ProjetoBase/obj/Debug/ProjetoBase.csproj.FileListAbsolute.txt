@@ -62,3 +62,6 @@ C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBa
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoB.0A5380EA.Up2Date
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.exe
 C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.pdb
+C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.exe.config
+C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.PerfisAcesso.PerfilDeAcessoCadastro.resources
+C:\Users\elder\OneDrive\Documentos\cartorioApi\ProjetoBase\ProjetoBase\ProjetoBase\obj\Debug\ProjetoBase.Formularios.PerfisAcesso.PerfilDeAcessoMenu.resources

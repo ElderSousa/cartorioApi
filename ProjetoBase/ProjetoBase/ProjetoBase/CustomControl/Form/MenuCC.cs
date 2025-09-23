@@ -6,6 +6,7 @@ using ProjetoBase.Formularios;
 using ProjetoBase.Formularios.Clientes;
 using ProjetoBase.Formularios.Funcionarios;
 using ProjetoBase.Formularios.NiveisAcessoMenu;
+using ProjetoBase.Formularios.PerfisAcesso;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -121,6 +122,12 @@ namespace ProjetoBase.CustomControl.Form
         {
             NivelDeAcessoMenu formNiveis = new NivelDeAcessoMenu();
             formNiveis.Show();
+        }
+
+        private void perfilDeAcessoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PerfilDeAcessoMenu formPerfis = new PerfilDeAcessoMenu();
+            formPerfis.Show();
         }
     }
 }

@@ -204,17 +204,29 @@
     <Compile Include="Formularios\MenuInicial.Designer.cs">
       <DependentUpon>MenuInicial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\NiveisAcessoMenu\NivelDeAcessoCadastro.cs">
+    <Compile Include="Formularios\NiveisAcesso\NivelDeAcessoCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\NiveisAcessoMenu\NivelDeAcessoCadastro.Designer.cs">
+    <Compile Include="Formularios\NiveisAcesso\NivelDeAcessoCadastro.Designer.cs">
       <DependentUpon>NivelDeAcessoCadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\NiveisAcessoMenu\NivelDeAcessoMenu.cs">
+    <Compile Include="Formularios\NiveisAcesso\NivelDeAcessoMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\NiveisAcessoMenu\NivelDeAcessoMenu.Designer.cs">
+    <Compile Include="Formularios\NiveisAcesso\NivelDeAcessoMenu.Designer.cs">
       <DependentUpon>NivelDeAcessoMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\PerfisAcesso\PerfilDeAcessoCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\PerfisAcesso\PerfilDeAcessoCadastro.Designer.cs">
+      <DependentUpon>PerfilDeAcessoCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\PerfisAcesso\PerfilDeAcessoMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\PerfisAcesso\PerfilDeAcessoMenu.Designer.cs">
+      <DependentUpon>PerfilDeAcessoMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Seletor\ListarSeletores.cs" />
     <Compile Include="Formularios\Seletor\ListaSeletorModoEscrita.cs">
@@ -273,11 +285,17 @@
     <EmbeddedResource Include="Formularios\MenuInicial.resx">
       <DependentUpon>MenuInicial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\NiveisAcessoMenu\NivelDeAcessoCadastro.resx">
+    <EmbeddedResource Include="Formularios\NiveisAcesso\NivelDeAcessoCadastro.resx">
       <DependentUpon>NivelDeAcessoCadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\NiveisAcessoMenu\NivelDeAcessoMenu.resx">
+    <EmbeddedResource Include="Formularios\NiveisAcesso\NivelDeAcessoMenu.resx">
       <DependentUpon>NivelDeAcessoMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\PerfisAcesso\PerfilDeAcessoCadastro.resx">
+      <DependentUpon>PerfilDeAcessoCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\PerfisAcesso\PerfilDeAcessoMenu.resx">
+      <DependentUpon>PerfilDeAcessoMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Seletor\ListaSeletorModoEscrita.resx">
       <DependentUpon>ListaSeletorModoEscrita.cs</DependentUpon>
