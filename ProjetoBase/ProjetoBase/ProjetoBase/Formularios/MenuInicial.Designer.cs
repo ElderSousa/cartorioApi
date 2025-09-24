@@ -38,7 +38,8 @@
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "MenuInicial";
             this.Text = "MenuInicial";
-            this.Load += new System.EventHandler(this.MenuInicial_Load);
+            //this.Load += new System.EventHandler(this.MenuInicial_Load);
+            this.Shown += new System.EventHandler(this.MenuInicial_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

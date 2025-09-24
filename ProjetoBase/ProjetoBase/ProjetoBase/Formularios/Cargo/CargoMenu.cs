@@ -1,23 +1,16 @@
-﻿using NHibernate.Criterion;
-using NHibernate.Transform;
+﻿using NHibernate.Transform;
 using ProjetoBase.CustomControl.Form;
+using ProjetoBase.CustomControls;
+using ProjetoBase.DataBase;
+using ProjetoBase.DataBase.Dominio.Funcionario;
+using ProjetoBase.DataBase.Ferramentas;
+using ProjetoBase.Enumeradores;
+using ProjetoBase.Exceptions;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProjetoBase.CustomControls;
-using ProjetoBase.CustomControls.Validacao;
-using ProjetoBase.DataBase;
-using ProjetoBase.DataBase.Dominio;
-using ProjetoBase.DataBase.Dominio.Funcionario;
-using ProjetoBase.Exceptions;
 
 namespace ProjetoBase.Formularios
 {
@@ -39,17 +32,11 @@ namespace ProjetoBase.Formularios
 
         void botao_cadastrar_Click(object sender, EventArgs e)
         {
-            if (ValidacaoNivelDeAcesso.acessoPermitido(btn_cadastrar.NivelDeAcesso))
-            {
-                CargoCadastro CargoCadastro = new CargoCadastro(null);
-                CargoCadastro.ShowDialog();
-                update();
-            }
-        }
+            // 1. Pega o valor da Tag e o converte (faz um "cast") para o tipo Enum
+            var permissaoNecessaria = (EnumNivelDeAcesso)btn_cadastrar.Tag;
 
-        void botao_alterar_Click(object sender, EventArgs e)
-        {
-            if (ValidacaoNivelDeAcesso.acessoPermitido(btn_alterar.NivelDeAcesso))
+            // 2. Usa a permissão na nossa verificação
+            if (SessaoSistema.VerificarPermissao(permissaoNecessaria))
             {
                 if (dgv_cargo.SelectedRows.Count > 0)
                 {
@@ -62,11 +49,44 @@ namespace ProjetoBase.Formularios
                     }
                 }
             }
+            else
+            {
+                MessageBox.Show("Você não tem permissão para alterar cargos.", "Acesso Negado", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+        }
+
+        void botao_alterar_Click(object sender, EventArgs e)
+        {
+            // 1. Pega o valor da Tag e o converte (faz um "cast") para o tipo Enum
+            var permissaoNecessaria = (EnumNivelDeAcesso)btn_alterar.Tag;
+
+            // 2. Usa a permissão na nossa verificação
+            if (SessaoSistema.VerificarPermissao(permissaoNecessaria))
+            {
+                if (dgv_cargo.SelectedRows.Count > 0)
+                {
+                    Cargo cargo = (Cargo)dgv_cargo.SelectedRows[0].Cells[0].Value;
+                    if (cargo != null)
+                    {
+                        CargoCadastro CargoCadastro = new CargoCadastro(cargo);
+                        CargoCadastro.ShowDialog();
+                        update();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Você não tem permissão para alterar cargos.", "Acesso Negado", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
         }
 
         private void PessoaMenu_Load(object sender, EventArgs e)
         {
             BarraLateralBotoes.configurarBotoes();
+
+            btn_cadastrar.Tag = EnumNivelDeAcesso.AcaoCargoCadastrar;
+            btn_alterar.Tag = EnumNivelDeAcesso.AcaoCargoAlterar;
+
             update();
         }
 

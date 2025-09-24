@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.pnlPerfilAcesso = new System.Windows.Forms.Panel();
-            this.btnNovo = new ProjetoBase.CustomControls.BotaoCC();
-            this.btnAlterar = new ProjetoBase.CustomControls.BotaoCC();
             this.btnExcluir = new ProjetoBase.CustomControls.BotaoCC();
+            this.btnAlterar = new ProjetoBase.CustomControls.BotaoCC();
+            this.btnNovo = new ProjetoBase.CustomControls.BotaoCC();
             this.dgvPerfisAcesso = new ProjetoBase.CustomControls.Input.DataGridViewCC();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,47 +49,50 @@
             this.pnlPerfilAcesso.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPerfilAcesso.Location = new System.Drawing.Point(0, 0);
             this.pnlPerfilAcesso.Name = "pnlPerfilAcesso";
-            this.pnlPerfilAcesso.Size = new System.Drawing.Size(800, 40);
+            this.pnlPerfilAcesso.Size = new System.Drawing.Size(800, 46);
             this.pnlPerfilAcesso.TabIndex = 0;
             // 
-            // btnNovo
+            // btnExcluir
             // 
-            this.btnNovo.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
-            this.btnNovo.Location = new System.Drawing.Point(3, 10);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.NivelDeAcesso = null;
-            this.btnNovo.Size = new System.Drawing.Size(96, 23);
-            this.btnNovo.TabIndex = 0;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.TipoBotao = ProjetoBase.Enumeradores.TipoBotao.Default;
-            this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
+            this.btnExcluir.Location = new System.Drawing.Point(201, 3);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.NivelDeAcesso = null;
+            this.btnExcluir.Size = new System.Drawing.Size(88, 30);
+            this.btnExcluir.TabIndex = 2;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TipoBotao = ProjetoBase.Enumeradores.TipoBotao.Default;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
-            this.btnAlterar.Location = new System.Drawing.Point(105, 10);
+            this.btnAlterar.Location = new System.Drawing.Point(105, 4);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.NivelDeAcesso = null;
-            this.btnAlterar.Size = new System.Drawing.Size(90, 23);
+            this.btnAlterar.Size = new System.Drawing.Size(90, 29);
             this.btnAlterar.TabIndex = 1;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TipoBotao = ProjetoBase.Enumeradores.TipoBotao.Default;
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
-            // btnExcluir
+            // btnNovo
             // 
-            this.btnExcluir.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
-            this.btnExcluir.Location = new System.Drawing.Point(201, 10);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.NivelDeAcesso = null;
-            this.btnExcluir.Size = new System.Drawing.Size(88, 23);
-            this.btnExcluir.TabIndex = 2;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.TipoBotao = ProjetoBase.Enumeradores.TipoBotao.Default;
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovo.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
+            this.btnNovo.Location = new System.Drawing.Point(3, 3);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.NivelDeAcesso = null;
+            this.btnNovo.Size = new System.Drawing.Size(96, 30);
+            this.btnNovo.TabIndex = 0;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.TipoBotao = ProjetoBase.Enumeradores.TipoBotao.Default;
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // dgvPerfisAcesso
             // 
@@ -99,13 +102,13 @@
             this.Nome,
             this.Objeto});
             this.dgvPerfisAcesso.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvPerfisAcesso.Location = new System.Drawing.Point(0, 40);
+            this.dgvPerfisAcesso.Location = new System.Drawing.Point(0, 46);
             this.dgvPerfisAcesso.MultiSelect = false;
             this.dgvPerfisAcesso.Name = "dgvPerfisAcesso";
             this.dgvPerfisAcesso.NomeDisplay = null;
             this.dgvPerfisAcesso.Obrigatorio = false;
             this.dgvPerfisAcesso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPerfisAcesso.Size = new System.Drawing.Size(800, 410);
+            this.dgvPerfisAcesso.Size = new System.Drawing.Size(800, 404);
             this.dgvPerfisAcesso.SomenteLeitura = false;
             this.dgvPerfisAcesso.TabIndex = 1;
             // 

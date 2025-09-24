@@ -203,7 +203,7 @@
             this.clbNiveisAcesso.FormattingEnabled = true;
             this.clbNiveisAcesso.Location = new System.Drawing.Point(106, 129);
             this.clbNiveisAcesso.Name = "clbNiveisAcesso";
-            this.clbNiveisAcesso.Size = new System.Drawing.Size(110, 19);
+            this.clbNiveisAcesso.Size = new System.Drawing.Size(159, 19);
             this.clbNiveisAcesso.TabIndex = 9;
             // 
             // cmbPerfilAcesso

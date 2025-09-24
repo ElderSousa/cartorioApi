@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProjetoBase.Enumeradores
+﻿namespace ProjetoBase.Enumeradores
 {
     //Referente ao tipo do controle TextBoxLabelCC
     public enum EnumNivelDeAcesso
     {
         Nao_Implementado = 0,
-        Cargo = 1
-        
+        AcessoTelaFuncionarios = 1,
+        AcessoTelaNiveisDeAcesso = 2,
+        AcessoTelaPerfisDeAcesso = 3,
+        AcessoTelaCargo = 4,
+        AcessoTelaClientes = 5,
+        AcaoCargoAlterar = 6,
+        AcaoCargoCadastrar = 7,
+
     }
 }

@@ -111,7 +111,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CustomControl\Validacao\ValidacaoDadosObrigatorios.cs" />
-    <Compile Include="CustomControl\Validacao\ValidacaoNivelDeAcesso.cs" />
     <Compile Include="CustomControl\Validacao\ValidacaoTextBox.cs" />
     <Compile Include="CustomControl\ValorManager.cs" />
     <Compile Include="DataBase\Dominio\Cliente.cs" />
@@ -130,6 +129,7 @@
     <Compile Include="DataBase\Ferramentas\ICrud.cs" />
     <Compile Include="DataBase\Ferramentas\Repositorio.cs" />
     <Compile Include="DataBase\Ferramentas\Repositorios.cs" />
+    <Compile Include="DataBase\Ferramentas\SessaoSistema.cs" />
     <Compile Include="DataBase\Ferramentas\SessionFactory.cs" />
     <Compile Include="DataBase\Ferramentas\SqlStatementInterceptor.cs" />
     <Compile Include="DataBase\Interface\ComboBoxInterface.cs" />
@@ -160,7 +160,6 @@
     <Compile Include="Ferramentas\ExcecaoManager.cs" />
     <Compile Include="Ferramentas\InstanciaServidor.cs" />
     <Compile Include="Ferramentas\Serializacao.cs" />
-    <Compile Include="Ferramentas\SessaoSistema.cs" />
     <Compile Include="Ferramentas\VersaoTecnoCart.cs" />
     <Compile Include="Formularios\Cargo\CargoCadastro.cs">
       <SubType>Form</SubType>

@@ -1,13 +1,8 @@
-﻿using ProjetoBase.DataBase;
+﻿using NHibernate.Transform;
+using ProjetoBase.DataBase;
 using ProjetoBase.DataBase.Dominio.Funcionario;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoBase.Formularios.Funcionarios
@@ -39,8 +34,16 @@ namespace ProjetoBase.Formularios.Funcionarios
 
         private void CarregarPerfisDeAcesso()
         {
-            // Busca todos os perfis de acesso do banco
-            IList<PerfilDeAcesso> perfis = SessionFactory.Session().QueryOver<PerfilDeAcesso>().OrderBy(p => p.Nome).Asc.List();
+            // Alias para a coleção que queremos buscar junto
+            NivelDeAcesso nivelAcessoAlias = null;
+
+            // A nova consulta com JoinAlias para buscar os perfis E suas permissões
+            IList<PerfilDeAcesso> perfis = SessionFactory.Session()
+                .QueryOver<PerfilDeAcesso>()
+                .Left.JoinAlias(p => p.NivelDeAcesso, () => nivelAcessoAlias)
+                .TransformUsing(Transformers.DistinctRootEntity)
+                .OrderBy(p => p.Nome).Asc
+                .List();
 
             cmbPerfilAcesso.DataSource = perfis;
             cmbPerfilAcesso.DisplayMember = "Nome";

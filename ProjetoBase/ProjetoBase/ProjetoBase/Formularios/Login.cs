@@ -1,5 +1,7 @@
-﻿using ProjetoBase.DataBase;
+﻿using NHibernate.Transform;
+using ProjetoBase.DataBase;
 using ProjetoBase.DataBase.Dominio.Funcionario;
+using ProjetoBase.DataBase.Ferramentas;
 using ProjetoBase.Ferramentas;
 using System;
 using System.Collections.Generic;
@@ -10,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NHibernate.Criterion;
 
 namespace ProjetoBase.Formularios
 {
@@ -42,11 +45,22 @@ namespace ProjetoBase.Formularios
             {
                 var sessao = SessionFactory.Session();
 
-                // 3. Busca o usuário pelo login no banco de dados
-                Usuario usuario = sessao.QueryOver<Usuario>()
-                                        .Where(u => u.Login == login)
-                                        .SingleOrDefault();
+                // Criamos os "apelidos" para todas as coleções
+                NivelDeAcesso nivelAlias = null;
+                PerfilDeAcesso perfilAlias = null;
+                NivelDeAcesso nivelDoPerfilAlias = null; // Alias para a lista DENTRO do perfil
 
+                // A consulta final que busca a hierarquia completa de permissões
+                Usuario usuario = sessao.QueryOver<Usuario>()
+                    .Where(u => u.Login == login)
+                    // Busca as permissões diretas do usuário
+                    .Left.JoinAlias(u => u.NivelDeAcesso, () => nivelAlias)
+                    // Busca o objeto Perfil de Acesso
+                    .Left.JoinAlias(u => u.PerfilDeAcesso, () => perfilAlias)
+                    // A PARTIR DO PERFIL, busca as permissões DENTRO do perfil
+                    .Left.JoinAlias(() => perfilAlias.NivelDeAcesso, () => nivelDoPerfilAlias)
+                    .TransformUsing(Transformers.DistinctRootEntity)
+                    .SingleOrDefault();
                 // 4. Verifica se o usuário existe E se a senha está correta
                 if (usuario != null && usuario.VerificarSenha(senha))
                 {

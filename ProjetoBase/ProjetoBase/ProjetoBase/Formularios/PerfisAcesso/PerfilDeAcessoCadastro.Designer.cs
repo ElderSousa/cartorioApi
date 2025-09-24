@@ -66,11 +66,12 @@
             this.clbNiveisAcesso.FormattingEnabled = true;
             this.clbNiveisAcesso.Location = new System.Drawing.Point(174, 64);
             this.clbNiveisAcesso.Name = "clbNiveisAcesso";
-            this.clbNiveisAcesso.Size = new System.Drawing.Size(105, 19);
+            this.clbNiveisAcesso.Size = new System.Drawing.Size(197, 19);
             this.clbNiveisAcesso.TabIndex = 3;
             // 
             // btnSalvar
             // 
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
             this.btnSalvar.Location = new System.Drawing.Point(12, 90);
             this.btnSalvar.Name = "btnSalvar";
@@ -84,6 +85,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.Location = new System.Drawing.Point(109, 90);
             this.btnCancelar.Name = "btnCancelar";
