@@ -11,6 +11,6 @@
         AcessoTelaClientes = 5,
         AcaoCargoAlterar = 6,
         AcaoCargoCadastrar = 7,
-
+        AcessoRelatorioClientes = 8
     }
 }

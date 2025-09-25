@@ -151,6 +151,12 @@
     <Compile Include="Formularios\ConfigConnection\ConfiguracaoConexao.Designer.cs">
       <DependentUpon>ConfiguracaoConexao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Relatorios\RelatorioClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Relatorios\RelatorioClientes.Designer.cs">
+      <DependentUpon>RelatorioClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Renders\MenuColorTable.cs" />
     <None Include="docker-compose.yml" />
     <Compile Include="Enumeradores\EnumNivelDeAcesso.cs" />
@@ -310,6 +316,9 @@
     <EmbeddedResource Include="Formularios\PerfisAcesso\PerfilDeAcessoMenu.resx">
       <DependentUpon>PerfilDeAcessoMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Relatorios\RelatorioClientes.resx">
+      <DependentUpon>RelatorioClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Seletor\ListaSeletorModoEscrita.resx">
       <DependentUpon>ListaSeletorModoEscrita.cs</DependentUpon>
     </EmbeddedResource>
@@ -374,7 +383,11 @@
   <ItemGroup>
     <None Include="Resources\Icon_btn_cadastrar.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="bin\Debug\config.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
