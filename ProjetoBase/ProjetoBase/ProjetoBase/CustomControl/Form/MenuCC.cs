@@ -5,8 +5,10 @@ using ProjetoBase.Formularios.Clientes;
 using ProjetoBase.Formularios.Funcionarios;
 using ProjetoBase.Formularios.NiveisAcessoMenu;
 using ProjetoBase.Formularios.PerfisAcesso;
+using ProjetoBase.Renderers;
 using System;
 using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace ProjetoBase.CustomControl.Form
 {
@@ -20,6 +22,8 @@ namespace ProjetoBase.CustomControl.Form
         public MenuCC()
         {
             InitializeComponent();
+
+            this.menuStrip1.Renderer = new ToolStripProfessionalRenderer(new MenuColorTable());
         }
 
         public void fecharMenu()

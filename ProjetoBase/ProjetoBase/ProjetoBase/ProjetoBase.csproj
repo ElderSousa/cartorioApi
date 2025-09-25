@@ -56,6 +56,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
@@ -115,7 +116,7 @@
     <Compile Include="CustomControl\ValorManager.cs" />
     <Compile Include="DataBase\Dominio\Cliente.cs" />
     <Compile Include="DataBase\Dominio\Funcionario\Cargo.cs" />
-    <Compile Include="DataBase\Dominio\Funcionario\CriptografiaHelper.cs" />
+    <Compile Include="DataBase\Helpers\CriptografiaHelper.cs" />
     <Compile Include="DataBase\Dominio\Funcionario\Funcionario.cs" />
     <Compile Include="DataBase\Dominio\Funcionario\NivelDeAcesso.cs" />
     <Compile Include="DataBase\Dominio\Funcionario\NivelDeAcessoDinamico.cs" />
@@ -144,6 +145,13 @@
     <Compile Include="DataBase\Mapeamento\Funcionario\PerfilDeAcessoMap.cs" />
     <Compile Include="DataBase\Mapeamento\Funcionario\SessaoLoginMap.cs" />
     <Compile Include="DataBase\Mapeamento\Funcionario\UsuarioMap.cs" />
+    <Compile Include="Formularios\ConfigConnection\ConfiguracaoConexao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ConfigConnection\ConfiguracaoConexao.Designer.cs">
+      <DependentUpon>ConfiguracaoConexao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renders\MenuColorTable.cs" />
     <None Include="docker-compose.yml" />
     <Compile Include="Enumeradores\EnumNivelDeAcesso.cs" />
     <Compile Include="Enumeradores\EnumResultadoQuery.cs" />
@@ -274,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Clientes\ClienteMenu.resx">
       <DependentUpon>ClienteMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ConfigConnection\ConfiguracaoConexao.resx">
+      <DependentUpon>ConfiguracaoConexao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Ferramentas\ReconectarBancoCadastro.resx">
       <DependentUpon>ReconectarBancoCadastro.cs</DependentUpon>

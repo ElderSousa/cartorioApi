@@ -2,10 +2,12 @@
 using ProjetoBase.DataBase.Ferramentas;
 using ProjetoBase.Enumeradores;
 using ProjetoBase.Formularios.Clientes;
+using ProjetoBase.Formularios.ConfigDataBase;
 using ProjetoBase.Formularios.Funcionarios;
 using ProjetoBase.Formularios.NiveisAcessoMenu;
 using ProjetoBase.Formularios.PerfisAcesso;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ProjetoBase.Formularios
@@ -34,6 +36,7 @@ namespace ProjetoBase.Formularios
 
             // --- CRIAÇÃO DO MENU "CADASTRO" (SE HOUVER PERMISSÃO PARA ALGUM FILHO) ---
             var menuCadastro = new ToolStripMenuItem("Cadastro");
+            menuCadastro.ForeColor = Color.White;
             bool adicionarMenuCadastro = false;
 
             // Adiciona o item "Clientes"
@@ -41,6 +44,7 @@ namespace ProjetoBase.Formularios
             {
                 var menuClientes = new ToolStripMenuItem("Clientes");
                 // Define a ação de clique diretamente
+                menuClientes.ForeColor = Color.White;
                 menuClientes.Click += (s, ev) => { new ClienteMenu().Show(); };
                 menuCadastro.DropDownItems.Add(menuClientes);
                 adicionarMenuCadastro = true;
@@ -48,11 +52,13 @@ namespace ProjetoBase.Formularios
 
             // --- CRIAÇÃO DO SUB-MENU "RH" (SE HOUVER PERMISSÃO PARA ALGUM FILHO) ---
             var menuRH = new ToolStripMenuItem("RH");
+            menuRH.ForeColor = Color.White;
             bool adicionarMenuRH = false;
 
             if (SessaoSistema.VerificarPermissao(EnumNivelDeAcesso.AcessoTelaFuncionarios))
             {
                 var menuFuncionarios = new ToolStripMenuItem("Funcionários");
+                menuFuncionarios.ForeColor = Color.White;
                 menuFuncionarios.Click += (s, ev) => { new FuncionarioCadastro().ShowDialog(); };
                 menuRH.DropDownItems.Add(menuFuncionarios);
                 adicionarMenuRH = true;
@@ -61,6 +67,7 @@ namespace ProjetoBase.Formularios
             if (SessaoSistema.VerificarPermissao(EnumNivelDeAcesso.AcessoTelaCargo))
             {
                 var menuCargo = new ToolStripMenuItem("Cargo");
+                menuCargo.ForeColor = Color.White;
                 menuCargo.Click += (s, ev) => { new CargoMenu().Show(); };
                 menuRH.DropDownItems.Add(menuCargo);
                 adicionarMenuRH = true;
@@ -69,6 +76,7 @@ namespace ProjetoBase.Formularios
             if (SessaoSistema.VerificarPermissao(EnumNivelDeAcesso.AcessoTelaNiveisDeAcesso))
             {
                 var menuNiveis = new ToolStripMenuItem("Níveis de Acesso");
+                menuNiveis.ForeColor = Color.White;
                 menuNiveis.Click += (s, ev) => { new NivelDeAcessoMenu().Show(); };
                 menuRH.DropDownItems.Add(menuNiveis);
                 adicionarMenuRH = true;
@@ -77,6 +85,7 @@ namespace ProjetoBase.Formularios
             if (SessaoSistema.VerificarPermissao(EnumNivelDeAcesso.AcessoTelaPerfisDeAcesso))
             {
                 var menuPerfis = new ToolStripMenuItem("Perfis de Acesso");
+                menuPerfis.ForeColor = Color.White;
                 menuPerfis.Click += (s, ev) => { new PerfilDeAcessoMenu().Show(); };
                 menuRH.DropDownItems.Add(menuPerfis);
                 adicionarMenuRH = true;
@@ -95,7 +104,21 @@ namespace ProjetoBase.Formularios
                 this.menuStrip1.Items.Add(menuCadastro);
             }
 
-            // (Adicionar outros menus de nível superior, como "Relatórios", seguiria o mesmo padrão aqui)
+            // --- NOVA SEÇÃO: CRIAÇÃO DO MENU "CONFIGURAÇÕES" ---
+            // A verificação abaixo garante que apenas administradores vejam este menu.
+            if (SessaoSistema.funcionario != null && SessaoSistema.funcionario.usuario.Administrador)
+            {
+                var menuConfiguracoes = new ToolStripMenuItem("Configurações");
+                menuConfiguracoes.ForeColor = Color.White;
+
+                var menuConexao = new ToolStripMenuItem("Conexão com Banco de Dados");
+                menuConexao.ForeColor = Color.White;
+                menuConexao.Click += (s, ev) => { new ConfiguracaoConexao().ShowDialog(); };
+                menuConfiguracoes.DropDownItems.Add(menuConexao);
+
+                // Adiciona o novo menu "Configurações" à barra de menu principal
+                this.menuStrip1.Items.Add(menuConfiguracoes);
+            }
         }
     }
 }

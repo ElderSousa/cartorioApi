@@ -16,6 +16,8 @@ namespace ProjetoBase.Config
 
         private Decimal memoriaMaxima; //Memoria maxima utilizavel
 
+        private string layoutSistema;
+
 
         public List<InstanciaServidor> Instancias
         {
@@ -29,7 +31,13 @@ namespace ProjetoBase.Config
             set { memoriaMaxima = value; }
         }
 
-    
+        public string LayoutSistema
+        {
+            get { return layoutSistema; }
+            set { layoutSistema = value; }
+        }
+
+
         //------------Configs App Cliente---------------
 
 
@@ -64,6 +72,27 @@ namespace ProjetoBase.Config
             set { caminhoArquivosTecnoCart = value; }
         }
         //------------Configs Servidor---------------
+
+        public Config Clone()
+        {
+            return new Config
+            {
+                Instancias = this.Instancias.Select(i => new InstanciaServidor
+                {
+                    NomeInstancia = i.NomeInstancia,
+                    Servidor = i.Servidor,
+                    Usuario = i.Usuario,
+                    Senha = i.Senha,
+                    UltimaInstanciaUsada = i.UltimaInstanciaUsada
+                }).ToList(),
+                MemoriaMaxima = this.MemoriaMaxima,
+                LayoutSistema = this.LayoutSistema,
+                Anexos = this.Anexos,
+                VersaoCliente = this.VersaoCliente,
+                ChaveCartorio = this.ChaveCartorio,
+                CaminhoArquivosTecnoCart = this.CaminhoArquivosTecnoCart
+            };
+        }
 
     }
 }
