@@ -143,6 +143,13 @@ namespace ProjetoBase.Formularios
             }
 
         }
+
+        private void MenuInicial_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            // Environment.Exit(0) é uma forma mais forçada de encerrar a aplicação,
+            // garantindo que threads em background também sejam terminadas.
+            Environment.Exit(0);
+        }
     }
 }
 

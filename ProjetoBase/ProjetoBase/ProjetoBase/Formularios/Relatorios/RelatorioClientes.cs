@@ -85,22 +85,41 @@ namespace ProjetoBase.Formularios.Relatorios
         {
             // Prepara a tabela em memória para exibir os dados
             DataTable dt = new DataTable();
-            dt.Columns.Add("Id");
-            dt.Columns.Add("Tipo");
-            dt.Columns.Add("Nome/Razão Social");
-            dt.Columns.Add("CPF/CNPJ");
-            dt.Columns.Add("Cidade");
+            dt.Columns.Add("ID");
+            dt.Columns.Add("TipoDePessoa");
+            dt.Columns.Add("Nome");
+            dt.Columns.Add("CPF");
+            dt.Columns.Add("RazaoSocial");
+            dt.Columns.Add("CNPJ");
             dt.Columns.Add("Email");
 
             foreach (var cliente in resultados)
             {
                 if (cliente.Tipo == "PF")
                 {
-                    dt.Rows.Add(cliente.Id, "Física", cliente.Nome, cliente.Cpf, cliente.Cidade, cliente.Email);
+                    dt.Rows.Add(
+                        cliente.Id,
+                        "Física",
+                        cliente.Nome,
+                        cliente.Cpf,
+                        null,
+                        null,
+                        cliente.Email
+                        
+                    );
                 }
                 else if (cliente.Tipo == "PJ")
                 {
-                    dt.Rows.Add(cliente.Id, "Jurídica", cliente.RazaoSocial, cliente.Cnpj, cliente.Cidade, cliente.Email);
+                    dt.Rows.Add(
+                        cliente.Id,
+                        "Jurídica",
+                        null,
+                        null,
+                        cliente.RazaoSocial,
+                        cliente.Cnpj,
+                        cliente.Email
+                        
+                    );
                 }
             }
 

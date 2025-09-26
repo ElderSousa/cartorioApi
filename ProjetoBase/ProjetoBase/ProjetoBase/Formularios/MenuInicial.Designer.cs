@@ -38,7 +38,7 @@
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "MenuInicial";
             this.Text = "MenuInicial";
-            //this.Load += new System.EventHandler(this.MenuInicial_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MenuInicial_FormClosing_1);
             this.Shown += new System.EventHandler(this.MenuInicial_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();

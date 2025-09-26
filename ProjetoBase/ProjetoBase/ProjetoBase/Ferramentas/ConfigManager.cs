@@ -39,6 +39,8 @@ namespace ProjetoBase.Ferramentas
             {
                 // --- CORREÇÃO APLICADA AQUI ---
                 // Apenas a senha é criptografada antes de ser salva.
+                instancia.Servidor = instancia.Servidor;
+                instancia.Usuario = instancia.Usuario;
                 instancia.Senha = CriptografiaHelper.Criptografar(instancia.Senha);
             }
 

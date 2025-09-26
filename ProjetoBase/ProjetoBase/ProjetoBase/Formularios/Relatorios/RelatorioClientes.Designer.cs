@@ -39,13 +39,13 @@
             this.txtNomeFiltro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvResultados = new ProjetoBase.CustomControls.Input.DataGridViewCC();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RazaoSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoDePessoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RazaoSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoDePessoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).BeginInit();
             this.SuspendLayout();
@@ -154,13 +154,13 @@
             this.dgvResultados.AllowUserToAddRows = false;
             this.dgvResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResultados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nome,
             this.Id,
-            this.RazaoSocial,
+            this.TipoDePessoa,
+            this.Nome,
             this.CPF,
+            this.RazaoSocial,
             this.CNPJ,
-            this.Cidade,
-            this.TipoDePessoa});
+            this.Cidade});
             this.dgvResultados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvResultados.Location = new System.Drawing.Point(0, 213);
             this.dgvResultados.MultiSelect = false;
@@ -172,29 +172,35 @@
             this.dgvResultados.SomenteLeitura = false;
             this.dgvResultados.TabIndex = 1;
             // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "Nome";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            // 
             // Id
             // 
             this.Id.DataPropertyName = "Id";
             this.Id.HeaderText = "Id";
             this.Id.Name = "Id";
             // 
-            // RazaoSocial
+            // TipoDePessoa
             // 
-            this.RazaoSocial.DataPropertyName = "RazaoSocial";
-            this.RazaoSocial.HeaderText = "RazaoSocial";
-            this.RazaoSocial.Name = "RazaoSocial";
+            this.TipoDePessoa.DataPropertyName = "TipoDePessoa";
+            this.TipoDePessoa.HeaderText = "TipoDePessoa";
+            this.TipoDePessoa.Name = "TipoDePessoa";
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "Nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
             // 
             // CPF
             // 
             this.CPF.DataPropertyName = "CPF";
             this.CPF.HeaderText = "CPF";
             this.CPF.Name = "CPF";
+            // 
+            // RazaoSocial
+            // 
+            this.RazaoSocial.DataPropertyName = "RazaoSocial";
+            this.RazaoSocial.HeaderText = "RazaoSocial";
+            this.RazaoSocial.Name = "RazaoSocial";
             // 
             // CNPJ
             // 
@@ -207,12 +213,6 @@
             this.Cidade.DataPropertyName = "Cidade";
             this.Cidade.HeaderText = "Cidade";
             this.Cidade.Name = "Cidade";
-            // 
-            // TipoDePessoa
-            // 
-            this.TipoDePessoa.DataPropertyName = "TipoDePessoa";
-            this.TipoDePessoa.HeaderText = "TipoDePessoa";
-            this.TipoDePessoa.Name = "TipoDePessoa";
             // 
             // RelatorioClientes
             // 
@@ -244,12 +244,12 @@
         private System.Windows.Forms.ComboBox cmbTipoFiltro;
         private System.Windows.Forms.Label label4;
         private CustomControls.Input.DataGridViewCC dgvResultados;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RazaoSocial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoDePessoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RazaoSocial;
         private System.Windows.Forms.DataGridViewTextBoxColumn CNPJ;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoDePessoa;
     }
 }

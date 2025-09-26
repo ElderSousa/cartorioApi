@@ -59,22 +59,43 @@ namespace ProjetoBase.Ferramentas
             if (string.IsNullOrEmpty(textoCriptografado))
                 return string.Empty;
 
+            textoCriptografado = textoCriptografado.Trim();
+
             try
             {
-                if (textoCriptografado is string)
+                // Verifica se a string é Base64 antes de tentar converter
+                if (IsBase64String(textoCriptografado))
+                {
+                    byte[] dadosCriptografados = Convert.FromBase64String(textoCriptografado);
+                    byte[] dadosDescriptografados = ProtectedData.Unprotect(dadosCriptografados, null, DataProtectionScope.CurrentUser);
+                    return Encoding.Unicode.GetString(dadosDescriptografados);
+                }
+                else
+                {
+                    // Se não for Base64, assume que já é texto puro
                     return textoCriptografado;
-
-                // Tenta descriptografar como se fosse um texto seguro
-                byte[] dadosCriptografados = Convert.FromBase64String(textoCriptografado);
-                byte[] dadosDescriptografados = ProtectedData.Unprotect(dadosCriptografados, null, DataProtectionScope.CurrentUser);
-                return Encoding.Unicode.GetString(dadosDescriptografados);
+                }
             }
-            catch (Exception ex) when (ex is FormatException || ex is CryptographicException)
+            catch (CryptographicException)
             {
-                // --- CORREÇÃO APLICADA AQUI ---
-                // Se ocorrer um erro de formato Base64 OU um erro de criptografia,
-                // assume que o texto já está em formato puro e simplesmente o devolve.
+                // Caso ocorra erro de descriptografia, retorna o texto original
                 return textoCriptografado;
+            }
+        }
+
+        private static bool IsBase64String(string s)
+        {
+            if (string.IsNullOrEmpty(s) || s.Length % 4 != 0)
+                return false;
+
+            try
+            {
+                Convert.FromBase64String(s);
+                return true;
+            }
+            catch
+            {
+                return false;
             }
         }
     }

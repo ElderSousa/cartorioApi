@@ -1,13 +1,7 @@
 ﻿using ProjetoBase.Config;
 using ProjetoBase.Ferramentas;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoBase.Formularios.ConfigDataBase
@@ -33,9 +27,8 @@ namespace ProjetoBase.Formularios.ConfigDataBase
                 var instancia = config.Instancias.FirstOrDefault();
                 if (instancia != null)
                 {
-                    // Descriptografa os dados para exibi-los nos campos de texto
-                    txtServidor.Text = CriptografiaHelper.Descriptografar(instancia.Servidor);
-                    txtUsuario.Text = CriptografiaHelper.Descriptografar(instancia.Usuario);
+                    txtServidor.Text = instancia.Servidor;
+                    txtUsuario.Text = instancia.Usuario;
                     txtSenha.Text = CriptografiaHelper.Descriptografar(instancia.Senha);
                 }
             }

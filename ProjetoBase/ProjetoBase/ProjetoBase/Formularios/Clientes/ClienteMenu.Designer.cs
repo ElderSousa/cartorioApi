@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.pnlAcoes = new System.Windows.Forms.Panel();
-            this.dgvClientes = new ProjetoBase.CustomControls.Input.DataGridViewCC();
             this.btnExcluir = new ProjetoBase.CustomControls.BotaoCC();
             this.btnAlterar = new ProjetoBase.CustomControls.BotaoCC();
             this.btnNovo = new ProjetoBase.CustomControls.BotaoCC();
+            this.dgvClientes = new ProjetoBase.CustomControls.Input.DataGridViewCC();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoDePessoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomePessoaFisica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomePessoaJuridica = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,29 +55,6 @@
             this.pnlAcoes.Name = "pnlAcoes";
             this.pnlAcoes.Size = new System.Drawing.Size(800, 40);
             this.pnlAcoes.TabIndex = 1;
-            // 
-            // dgvClientes
-            // 
-            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Tipo,
-            this.NomePessoaFisica,
-            this.CPF,
-            this.NomePessoaJuridica,
-            this.CNPJ,
-            this.Email,
-            this.colObjetoCliente});
-            this.dgvClientes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvClientes.Location = new System.Drawing.Point(0, 40);
-            this.dgvClientes.MultiSelect = false;
-            this.dgvClientes.Name = "dgvClientes";
-            this.dgvClientes.NomeDisplay = null;
-            this.dgvClientes.Obrigatorio = false;
-            this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientes.Size = new System.Drawing.Size(800, 410);
-            this.dgvClientes.SomenteLeitura = false;
-            this.dgvClientes.TabIndex = 0;
             // 
             // btnExcluir
             // 
@@ -122,17 +99,40 @@
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
+            // dgvClientes
+            // 
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.TipoDePessoa,
+            this.NomePessoaFisica,
+            this.CPF,
+            this.NomePessoaJuridica,
+            this.CNPJ,
+            this.Email,
+            this.colObjetoCliente});
+            this.dgvClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvClientes.Location = new System.Drawing.Point(0, 40);
+            this.dgvClientes.MultiSelect = false;
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.NomeDisplay = null;
+            this.dgvClientes.Obrigatorio = false;
+            this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvClientes.Size = new System.Drawing.Size(800, 410);
+            this.dgvClientes.SomenteLeitura = false;
+            this.dgvClientes.TabIndex = 0;
+            // 
             // ID
             // 
             this.ID.DataPropertyName = "ID";
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             // 
-            // Tipo
+            // TipoDePessoa
             // 
-            this.Tipo.DataPropertyName = "Tipo";
-            this.Tipo.HeaderText = "Tipo";
-            this.Tipo.Name = "Tipo";
+            this.TipoDePessoa.DataPropertyName = "TipoDePessoa";
+            this.TipoDePessoa.HeaderText = "TipoDePessoa";
+            this.TipoDePessoa.Name = "TipoDePessoa";
             // 
             // NomePessoaFisica
             // 
@@ -194,7 +194,7 @@
         private CustomControls.BotaoCC btnAlterar;
         private CustomControls.BotaoCC btnNovo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoDePessoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomePessoaFisica;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomePessoaJuridica;
