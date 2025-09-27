@@ -30,7 +30,7 @@ namespace ProjetoBase.Ferramentas
             XmlSerializer mySerializer = new XmlSerializer(tipoObjeto);
 
             XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
-            ns.Add("tipos", "http://www.ginfes.com.br/tipos_v03.xsd");
+            ns.Add("tipos", "[http://www.ginfes.com.br/tipos_v03.xsd](http://www.ginfes.com.br/tipos_v03.xsd)");
 
             FileStream stream = new FileStream(nome + ".xml", FileMode.Create);
             mySerializer.Serialize(stream, objeto, ns);
@@ -95,12 +95,27 @@ namespace ProjetoBase.Ferramentas
             FileStream myFileStream = null;
             try
             {
-                nome = nome.Replace(".xml", "");
+                // --- INÍCIO DA CORREÇÃO ---
+                // Constrói o caminho absoluto para o arquivo, procurando na pasta
+                // onde as bibliotecas (DLLs) da aplicação estão.
+                string basePath = AppDomain.CurrentDomain.BaseDirectory;
+
+                // Para Web Applications, a base é a raiz, e os arquivos ficam na pasta 'bin'.
+                if (System.Web.HttpRuntime.AppDomainAppId != null)
+                {
+                    basePath = Path.Combine(basePath, "bin");
+                }
+
+                string fullPath = Path.Combine(basePath, nome + ".xml");
+                // --- FIM DA CORREÇÃO ---
 
                 Object objetoDeserializado;
                 Type tipoObjeto = objeto.GetType();
-                XmlSerializer mySerializer = new XmlSerializer(tipoObjeto);
-                myFileStream = new FileStream(nome + ".xml", FileMode.Open);
+                System.Xml.Serialization.XmlSerializer mySerializer = new System.Xml.Serialization.XmlSerializer(tipoObjeto);
+
+                // Usa o caminho absoluto
+                myFileStream = new FileStream(fullPath, FileMode.Open);
+
                 objetoDeserializado = mySerializer.Deserialize(myFileStream);
                 myFileStream.Close();
                 return objetoDeserializado;
@@ -198,7 +213,4 @@ namespace ProjetoBase.Ferramentas
     {
         public override Encoding Encoding => Encoding.UTF8;
     }
-
-
-
 }

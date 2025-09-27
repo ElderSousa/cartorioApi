@@ -18,6 +18,7 @@ namespace ProjetoBase.DataBase.Dominio
         public virtual string Ddd { get; set; }
         public virtual string Telefone { get; set; }
         public virtual string Email { get; set; }
+        public virtual string Observacoes { get; set; }
 
         // Campos de Pessoa Física (podem ser nulos se for PJ)
         public virtual string Nome { get; set; }
